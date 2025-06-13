@@ -12,15 +12,12 @@ export const routes: Routes = [
     {path: "home", component: Home },
     {path: "login", component: Login },
     {path: "registrer", component: Registrer },
-<<<<<<< HEAD
     {path: "dashboard/developerProfile", component: DeveloperProfile },
     {path: "dashboard/company", component: Offers },
     {path: "dashboard/about", component: Offers },
-=======
     {path: "dashboard/user", component: User},
     {path: "dashboard/user/new-form", component: UserNewForm},
     {path: "dashboard/offers", component: Offers },
->>>>>>> 7798a5b57c31b0bd56140b7553bd769733982598
     {path: "**", redirectTo: "home", pathMatch: "full" },
     {path: "", redirectTo: "home", pathMatch: "full" }
 ];
