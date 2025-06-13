@@ -1,1 +1,33 @@
-<p>main works!</p>
+<div>
+    <form [formGroup]="formData" class="formulario"></form>
+    <h1> Registra el Usuario</h1>
+        <div class="nombres">
+            <label for="nombre">Nombres</label>
+            <input type="text" id="nombre" placeholder="Nombre" formControlName="nombre">
+        </div>
+        <div class="apellidos">
+            <label for="apellido">Apellidos</label>
+            <input type="text" id="apellido" placeholder="Apellidos" name="apellido">
+        </div>
+        <div class="edad">
+            <label for="Edad">Edad</label>
+            <input type="number" name="edad" id="Edad" placeholder="Edad">
+        </div>
+        <div class="nivel">
+            <label for="Nivel">Nivel</label>
+            <select value="Nivel" name="nivel">
+                <option value="Junior">Junior</option>
+                <option value="Mid-Level">Mid Level</option>
+                <option value="Expert">Senior</option>
+            </select>
+        </div>
+        <div class="genero">
+            <label for="genero">Genero</label>
+            <input type="checkbox" name="hombre" placeholder="Hombre">Hombre
+            <input type="checkbox" name="mujer" placeholder="Mujer">Mujer<br>
+        </div>
+        <div>
+            <button>Enviar</button>
+        </div>
+    </form>
+</div>

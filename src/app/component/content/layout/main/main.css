@@ -1,0 +1,22 @@
+#formulario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#formulario div {
+    margin: 15px;
+}
+
+.Nivel select{
+    margin: 0px 20px;
+}
+
+input {
+    border-radius: 15px;
+}
+
+#formulario .Nombres {
+    display: block;
+}
