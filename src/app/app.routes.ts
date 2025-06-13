@@ -4,14 +4,23 @@ import { Login } from './component/pages/public/login/login';
 import { Registrer } from './component/pages/public/registrer/registrer';
 import { DeveloperProfile } from './pages/private/developer-profile/developer-profile';
 import { Offers } from './pages/private/offers/offers';
+import { User } from './pages/private/user/user';
+import { UserNewForm } from './pages/private/new-form/new-form';
+
 
 export const routes: Routes = [
     {path: "home", component: Home },
     {path: "login", component: Login },
     {path: "registrer", component: Registrer },
+<<<<<<< HEAD
     {path: "dashboard/developerProfile", component: DeveloperProfile },
     {path: "dashboard/company", component: Offers },
     {path: "dashboard/about", component: Offers },
+=======
+    {path: "dashboard/user", component: User},
+    {path: "dashboard/user/new-form", component: UserNewForm},
+    {path: "dashboard/offers", component: Offers },
+>>>>>>> 7798a5b57c31b0bd56140b7553bd769733982598
     {path: "**", redirectTo: "home", pathMatch: "full" },
     {path: "", redirectTo: "home", pathMatch: "full" }
 ];
