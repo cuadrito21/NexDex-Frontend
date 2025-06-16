@@ -1,0 +1,29 @@
+<form 
+    [formGroup]="formData"
+    (submit)="onSubmit()"
+    >
+
+    <h1>Crear usuario</h1>
+
+    <div class="form-container">
+        <label for="nombre">Nombre y Apellido</label>
+        <input formControlName="name" class="input-text-form" type="text" placeholder="Ej: Cristhian Garcia" id="nombre">
+    </div>
+    <div class="form-container">
+        <label for="email">Email</label>
+        <input formControlName="email" class="input-text-form" type="text" placeholder="alejandrocristhian823@gmail.com" id="email">
+    </div>
+    <div class="form-container">
+        <label for="passwort">Contraseña</label>
+        <input class="password" formControlName="passwort" type="password" placeholder="Contraseña" id="passwort">
+    </div>
+    <div class="form-container">
+        <label for="role">Experiencia</label>
+        <select formControlName="role" id="role">
+            <option value="junior">Junior</option>
+            <option value="teenior">Teenior</option>
+            <option value="senior">Senior</option>
+        </select>
+    </div>
+    <button type="submit" class="button-form">Crear</button>
+</form>
