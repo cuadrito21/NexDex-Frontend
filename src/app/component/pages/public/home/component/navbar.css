@@ -23,15 +23,3 @@
     margin: 0 auto;
 }
 
-.tex-navbar{
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
-
-.video {
-    display: block;
-    position: absolute;
-    max-width: 100%;
-    top: 0;
-    }

@@ -1,4 +1,6 @@
 @import url(./component/navbar.css);
+@import url(./component/buttons.css);
+
 
 #background-video {
     position: fixed;

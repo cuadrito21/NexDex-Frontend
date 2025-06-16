@@ -1,0 +1,21 @@
+.tex-navbar{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-left-tex-navbar{
+    border: 1rem;
+    background-color: white;
+    color: black;
+    padding: .3rem;
+    width: 5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
