@@ -1,1 +1,25 @@
-<p>offers works!</p>
+<form [formGroup]="formData" >
+    <label for="title">Nombre de la oferta:</label>
+    <input type="text" id="title" formControlName="title" required>
+    
+    <label for="description">Descripcion de la oferta:</label>
+    <input type="text" id="description" formControlName="description" required>
+
+    <label for="Señority">select the señority of tihs job</label>
+    <select formControlName="señority" id="señority">señority
+        <option value="junior">junior</option>
+        <option value="Mid">mid</option>
+        <option value="senior">senior</option>
+    </select>
+
+    <label for="Modality">select the modality of tihs job</label>
+    <select formControlName="Modality" id="Modality">modality
+        <option value="junior">Remote</option>
+        <option value="Mid">On-site</option>
+        <option value="senior">Hibryd</option>
+    </select>
+    
+    <label for="technologiesRequired">Tecnologias requeridas:</label>
+    <textarea id="technologiesRequired" formControlName="technologiesRequired" rows="4" required></textarea>
+    <button type="submit">Enviar</button>
+</form>
