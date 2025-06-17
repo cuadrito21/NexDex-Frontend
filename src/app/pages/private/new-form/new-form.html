@@ -2,7 +2,7 @@
     [formGroup]="formData"
     (submit)="onSubmit()"
     >
-
+    
     <h1>Crear usuario</h1>
 
     <div class="form-container">
@@ -19,7 +19,7 @@
     </div>
     <div class="form-container">
         <label for="role">Experiencia</label>
-        <select formControlName="role" id="role">
+        <select formControlName="role" [value]="true" id="role">
             <option value="junior">Junior</option>
             <option value="teenior">Teenior</option>
             <option value="senior">Senior</option>
