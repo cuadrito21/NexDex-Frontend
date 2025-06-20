@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserService } from '../../../services/user-service';
+import { clearScreenDown } from 'readline';
 
 @Component({
   selector: 'app-new-form',
@@ -10,8 +12,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class UserNewForm {
   
   formData!: FormGroup;
+  user: any = []
 
-  constructor() {
+  constructor( private userService: UserService  ) {
     this.formData = new FormGroup({
       name: new FormControl("",[Validators.required, Validators.minLength( 5 ), Validators.maxLength( 30 )]),
       email: new FormControl("", [Validators.required, Validators.email]),
@@ -35,32 +38,23 @@ export class UserNewForm {
     this.formData.reset()
   }
 
-  ngOnChanges() {
-    console.log( 'ngOnChanges' );
-  }
   ngOnInit() {
-    console.log( 'ngOnInit' );
+    this.userService.getUserService().subscribe({
+      next: ( data: any ) => {
+        console.log( data);
+        this.user = data
+      },
+      error: ( error: any ) => {
+        console.log(error);
+      },
+      complete: () => {
+        console.log( "Complete" );
+      } 
+    })
   }
-  ngDoCheck() {
-    console.log( 'ngDoCheck' );
-  }
-  ngAfterContentInit() {
-    console.log( 'ngAfterContentInit' );
-  }
-  ngAfterContentChecked() {
-    console.log( 'ngAfterContentChecked' );
-  }
-  ngAfterViewInit() {
-    console.log( 'ngAfterViewInit' );
-  }
-  ngAfterViewChecked() {
-    console.log( 'ngAfterViewChecked' );
-  }
-  afterEveryRender() {
-    console.log( 'afterEveryRender' );
-  }
-  ngOnDestroy() {
-    console.log( 'ngOnDestroy' );
+
+  ngOnDestroy(){
+    console.log( "ngOnDestroy" );
   }
 
 }

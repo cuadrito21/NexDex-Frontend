@@ -20,9 +20,11 @@
     <div class="form-container">
         <label for="role">Experiencia</label>
         <select formControlName="role" [value]="true" id="role">
-            <option value="junior">Junior</option>
-            <option value="teenior">Teenior</option>
-            <option value="senior">Senior</option>
+            
+            @for (value of user; track $index) {
+                <option value="">selected</option>
+            }
+
         </select>
     </div>
     <button type="submit" class="button-form">Crear</button>
